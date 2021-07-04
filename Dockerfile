@@ -1,7 +1,7 @@
 FROM golang:latest as builder
 
 WORKDIR /build
-RUN adduser -u 10001 -D app-runner
+RUN useradd -u 10016 -D app-runner
 
 ENV GOPROXY https://goproxy.cn,direct
 COPY go.mod .
